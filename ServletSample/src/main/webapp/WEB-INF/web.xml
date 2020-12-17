@@ -19,10 +19,22 @@
   	<servlet-name>FirstServlet</servlet-name>
   	<url-pattern>/FirstServlet</url-pattern>
   </servlet-mapping>
-  
-  
-  
-  <servlet>
+
+	<servlet>
+		<servlet-name>EnvironmentVariableServlet</servlet-name>
+		<display-name>EnvironmentVariableServlet</display-name>
+		<description>See environment variables</description>
+		<servlet-class>com.test.servlet.EnvironmentVariableServlet</servlet-class>
+		<!--Un-comment  below line if you want to instantiate and initialize the servlet during the servlet-container(tomcat) startup-->
+		<!-- <load-on-startup>1</load-on-startup> -->
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EnvironmentVariableServlet</servlet-name>
+		<url-pattern>/environmentVariableServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
   	<servlet-name>TestSessionServlet</servlet-name>
   	<display-name>TestSessionServlet</display-name>
   	<description>Test session</description>
