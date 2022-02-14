@@ -34,6 +34,7 @@ public class TestSessionServlet extends HttpServlet {
 	 */
 	public void init(ServletConfig config) throws ServletException {
 		System.out.println("TestSessionServlet \"Init\" method called");
+
 	}
 
 	/**
@@ -52,6 +53,9 @@ public class TestSessionServlet extends HttpServlet {
 		//Get the exisiting session, if session doesn't exist it will return null
 		HttpSession session = request.getSession(false);
 		PrintWriter out = response.getWriter();
+
+
+
 		if(session!=null)
 		{
 			//get the attributes from session

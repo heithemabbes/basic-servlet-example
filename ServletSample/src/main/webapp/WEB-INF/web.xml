@@ -87,6 +87,21 @@
   	<servlet-name>DataPlaceHolderServlet</servlet-name>
   	<url-pattern>/DataPlaceHolderServlet</url-pattern>
   </servlet-mapping>
-  
+
+	<listener>
+		<listener-class>listener.MyListener</listener-class>
+	</listener>
+
+	<filter>
+		<filter-name>LogFilter</filter-name>
+		<filter-class>filter.LogFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>LogFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<!-- <servlet-name> FirstServlet</servlet-name>-->
+
+	</filter-mapping>
   
 </web-app>

@@ -32,7 +32,9 @@ public class FirstServlet extends HttpServlet {
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
+
 		System.out.println("FirstServlet \"Init\" method called");
+
 	}
 
 	/**
@@ -67,10 +69,13 @@ public class FirstServlet extends HttpServlet {
 	
 	private void storeInSessionAndRespond(HttpServletRequest request,
 			HttpServletResponse response) throws IOException {
+
 		PrintWriter out = response.getWriter();
+
 		String uname = request.getParameter("uname");
 		String emailId = request.getParameter("email");
 		System.out.println("Username from jsp page is "+ uname + " and email id is "+ emailId);
+
 		//Create a session
 		HttpSession session = request.getSession(true);
 		if(session!=null)
